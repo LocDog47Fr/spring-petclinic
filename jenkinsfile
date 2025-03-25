@@ -88,7 +88,7 @@ pipeline {
                 // Déploiement en utilisant le script externe
                 script {
                     // Rendre le script exécutable (au cas où)
-                    sh "chmod +x scripts/deploy.sh"
+                    sh "sudo chmod +x scripts/deploy.sh"
                     
                     // Exécuter le script de déploiement
 
@@ -119,7 +119,7 @@ pipeline {
                     sh "sleep 10"
                     
                     // Rendre le script exécutable (au cas où)
-                    sh "chmod +x scripts/verify.sh"
+                    sh "sudo chmod +x scripts/verify.sh"
                     
                     // Exécuter le script de vérification
                     sh "./scripts/verify.sh ${params.DEPLOY_ENV}"
