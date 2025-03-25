@@ -88,7 +88,7 @@ pipeline {
                 // Déploiement en utilisant le script externe
                 script {
                     // Rendre le script exécutable (au cas où)
-                    sh "sudo chmod +x scripts/deploy.sh"
+                    sh "chmod +x scripts/deploy.sh"
                     
                     // Exécuter le script de déploiement
 
