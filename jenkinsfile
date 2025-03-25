@@ -119,7 +119,7 @@ pipeline {
                     sh "sleep 10"
                     
                     // Rendre le script exécutable (au cas où)
-                    sh "sudo chmod +x scripts/verify.sh"
+                    sh "chmod +x scripts/verify.sh"
                     
                     // Exécuter le script de vérification
                     sh "./scripts/verify.sh ${params.DEPLOY_ENV}"
