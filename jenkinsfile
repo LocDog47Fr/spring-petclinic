@@ -43,6 +43,7 @@ pipeline {
                 script {
                     def profile = params.DEPLOY_ENV.toLowerCase()
                     sh "mvn clean package -DskipTests=${params.SKIP_TESTS} -P${profile}"
+                    sh "mvn spring-javaformat:apply"
                 }
                 
                 // Archiver l'artefact dans Jenkins si demandé
